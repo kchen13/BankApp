@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="anchorpane" stylesheets="@../css/fxmlview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <!-- Anthony Curran -->
+    <children>
+        <Label id="bank_name" layoutX="105.0" layoutY="28.0" prefHeight="43.0" prefWidth="391.0" styleClass="mainLabel" text="IST311 Team 1 Bank">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label id="action_label" layoutX="261.0" layoutY="71.0" prefHeight="45.0" prefWidth="79.0" styleClass="screenTitle" text="Login">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="146.0" layoutY="189.0" styleClass="smallLabel" text="User Name:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="151.0" layoutY="266.0" styleClass="smallLabel" text="Password:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField id="large_amount" fx:id="userName" layoutX="264.0" layoutY="179.0" promptText="johndoe@gmail.com" styleClass="textfield">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <TextField id="large_amount" fx:id="password" layoutX="264.0" layoutY="256.0" promptText="••••••••" styleClass="textfield">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <Button fx:id="login" layoutX="409.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="79.0" text="Login" />
+        <Button fx:id="register" layoutX="204.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="87.0" text="Register" />
+        <Label id="large_label" layoutX="22.0" layoutY="345.0" prefHeight="19.0" prefWidth="232.0" styleClass="smallestLabel" text="New User? Register here:" />
+        <Label fx:id="invalid" layoutX="222.0" layoutY="128.0" prefHeight="26.0" prefWidth="239.0" styleClass="smallestLabel" stylesheets="@../css/fxmlview.css" textFill="#e80a0a" visible="false" />
+    </children>
+</AnchorPane>

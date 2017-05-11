@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+    <stylesheets>
+        <URL value="@/css/fxmlview.css" />
+    </stylesheets>
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchorpane" stylesheets="@../css/fxmlview.css">
+            <children>
+                <Button id="deposit" fx:id="deposit" layoutX="354.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="142.0" text="Deposit" />
+                <Button id="withdraw" fx:id="withdraw" layoutX="354.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="142.0" text="Withdrawal" />
+                <Button id="transfer" fx:id="transfer" layoutX="354.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="142.0" text="Transfer" />
+                <Button id="BI" fx:id="BI" layoutX="111.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="142.0" text="Balance Inquiry" />
+                <Button id="TH" fx:id="TH" layoutX="111.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="142.0" text="Transactions" />
+                <Button id="report" fx:id="reports" layoutX="112.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="142.0" text="Reports" />
+                <Label id="bank_name" layoutX="94.0" layoutY="14.0" prefHeight="43.0" prefWidth="396.0" styleClass="mainLabel" text="IST311 Team 1 Bank">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="133.0" layoutY="92.0" styleClass="headingLabel" text="Account Data" />
+                <Label layoutX="365.0" layoutY="92.0" styleClass="headingLabel" text="Account Actions" />
+                <Label fx:id="dateField" layoutX="288.0" layoutY="323.0" styleClass="headingLabel" text="Date" />
+                <Label id="action_label" fx:id="hello" layoutX="221.0" layoutY="57.0" prefHeight="23.0" prefWidth="142.0" styleClass="headingLabel" />
+                <Button id="logout" fx:id="logout" layoutX="252.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="0.0" prefWidth="97.0" text="Logout" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

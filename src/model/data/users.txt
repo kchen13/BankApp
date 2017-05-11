@@ -1,0 +1,4 @@
+UID	firstName	lastName	middleInitial	email	password	
+1	t1	t1	t1	t1	t1	
+21	t2	t2	t2	t2	t2	
+37	Shawn	Conway	J	sjc54599@gmail.com	January81994	

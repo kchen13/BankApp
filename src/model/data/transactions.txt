@@ -1,0 +1,23 @@
+UID	accUID	transDate	category	description	amount	type	
+42	2	04-28-2017	Medical	[]	1.0	withdrawal	
+43	2	04-28-2017	NA	[]	1.0	withdrawal	
+44	4	04-28-2017	NA	[]	5.0	withdrawal	
+45	2	04-28-2017	Food	[test3]	2.0	withdrawal	
+46	2	04-28-2017	School	[test success text]	1.0	withdrawal	
+47	2	04-28-2017	Medical	[]	6000.0	withdrawal	
+48	2	04-28-2017	Food	[]	2000.0	withdrawal	
+49	38	04-28-2017	NA	 Transfer to Vacation Club	-50.0	transfer	
+50	40	04-28-2017	NA	 Transfer from Checking	50.0	transfer	
+51	38	04-28-2017	NA	 Transfer to Savings	-20.0	transfer	
+52	39	04-28-2017	NA	 Transfer from Checking	20.0	transfer	
+53	38	04-28-2017	Food	[]	5.0	withdrawal	
+54	40	04-28-2017	Rent	[]	4.0	withdrawal	
+55	40	04-28-2017	Fuel	[]	2.0	withdrawal	
+56	39	04-28-2017	Medical	[]	13.0	withdrawal	
+57	39	04-28-2017	Medical	[]	4.0	withdrawal	
+58	38	04-28-2017	School	[]	20.0	withdrawal	
+59	38	04-28-2017	Fuel	[]	50.0	withdrawal	
+60	3	04-28-2017	NA	 Transfer to Vacation Club	-12.0	transfer	
+61	4	04-28-2017	NA	 Transfer from Savings	12.0	transfer	
+62	2	04-28-2017	School	[]	10.0	withdrawal	
+63	3	04-28-2017	School	[]	10.0	withdrawal	

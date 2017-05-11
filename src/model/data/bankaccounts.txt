@@ -1,0 +1,13 @@
+UID	userUID	Name	balance	
+2	1	Checking	-7010.0	
+3	1	Savings	16.0	
+4	1	Vacation Club	99.0	
+2	1	Checking	67.0	
+3	1	Savings	38.0	
+4	1	Vacation Club	87.0	
+22	21	Checking	0.0	
+23	21	Savings	0.0	
+24	21	Vacation Club	0.0	
+38	37	Checking	-45.0	
+39	37	Savings	3.0	
+40	37	Vacation Club	44.0	

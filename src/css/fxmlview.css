@@ -1,0 +1,37 @@
+/*
+ * Main CSS
+ * Created by Dustin DiMarcello
+ */
+
+.anchorpane{
+    -fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+}
+.mainLabel{
+    -fx-font-family: "Courier New";
+    -fx-font-size: 36px;
+    -fx-text-fill: darkblue;
+}
+.headingLabel{
+    -fx-font: bold 8pt "Courier New";
+}
+.button{
+    -fx-font: 10pt "Courier New";
+    -fx-background-color: darkblue; 
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+}
+.textfield{
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 3, 2);
+}
+.screenTitle{
+    -fx-font: bold 22pt "System";
+}
+.smallLabel{
+    -fx-font: 12pt "Courier New";
+}
+.smallestLabel{
+    -fx-font: 9pt "Courier New";
+}

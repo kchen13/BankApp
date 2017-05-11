@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="anchorpane" stylesheets="@../css/fxmlview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+    <!-- Anthony Curran -->
+    <!-- Kelby Chen -->
+    <children>
+        <Label id="bank_name" layoutX="102.0" layoutY="14.0" prefHeight="43.0" prefWidth="392.0" styleClass="mainLabel" text="IST311 Team 1 Bank">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label id="action_label" layoutX="118.0" layoutY="61.0" prefHeight="45.0" prefWidth="365.0" styleClass="screenTitle" text="New Account Registration">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="40.0" layoutY="110.0" styleClass="smallLabel" text="First Name">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="40.0" layoutY="171.0" styleClass="smallLabel" text="Last Name">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="40.0" layoutY="201.0" styleClass="smallLabel" text="Email">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="40.0" layoutY="241.0" styleClass="smallLabel" text="Password">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label id="large_label" layoutX="40.0" layoutY="271.0" styleClass="smallLabel" text="Confirm Password">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField id="first_name" fx:id="firstName" layoutX="200.0" layoutY="110.0" onAction="#handleButtonAction" prefHeight="10.0" prefWidth="225.0" promptText="John" styleClass="textfield" />
+        <TextField id="middle_initial" fx:id="middleInitial" layoutX="200.0" layoutY="140.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="225.0" promptText="M" styleClass="textfield" />
+        <TextField id="last_name" fx:id="lastName" layoutX="200.0" layoutY="171.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="225.0" promptText="Doe" styleClass="textfield" />
+        <TextField id="email" fx:id="email" layoutX="200.0" layoutY="201.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="225.0" promptText="johndoe@gmail.com" styleClass="textfield" />
+        <TextField id="password" fx:id="password" layoutX="200.0" layoutY="241.0" onAction="#handleButtonAction" prefWidth="225.0" promptText="••••••••••••••" styleClass="textfield" />
+        <TextField id="confirm_password" fx:id="passwordConfirm" layoutX="200.0" layoutY="271.0" onAction="#handleButtonAction" prefWidth="225.0" promptText="••••••••••••••" styleClass="textfield" />
+        <Button id="register" fx:id="execute" layoutX="153.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="125.0" text="Register" />
+        <Button id="cancel" fx:id="cancel" layoutX="353.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="125.0" text="Cancel" />
+        <Label id="large_label" layoutX="40.0" layoutY="140.0" styleClass="smallLabel" text="Middle Initial">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="exists" layoutX="199.0" layoutY="307.0" prefHeight="17.0" prefWidth="195.0" styleClass="smallestLabel" stylesheets="@../css/fxmlview.css" textFill="RED" visible="false" />
+    </children>
+</AnchorPane>
