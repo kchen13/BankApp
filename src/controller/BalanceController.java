@@ -19,54 +19,62 @@ import javafx.stage.Stage;
 
 /**
  * FXML Controller class
- *
- * @author Soren Diehl
  * @author Kelby Chen
+ * @author Soren Diehl
  */
-public class BalanceController implements Initializable {
 
-    //Soren Diehl
-    //Kelby Chen
-    ObservableList<String> options
-            = FXCollections.observableArrayList(
-                    "Checking",
-                    "Savings",
-                    "Vacation Club"
-            );
+public class BalanceController implements Initializable {
     @FXML
     private TextField balance;
     @FXML
     private Button mainMenu;
     @FXML
     private ComboBox<?> accountType;
-    
-    model.Model model;
-    
-    //Kelby Chen
-    //Currency Formatter
+
+    //List for drop down boxes
+    ObservableList<String> options
+            = FXCollections.observableArrayList(
+                    "Checking",
+                    "Savings",
+                    "Vacation Club"
+            );
+
+    //Format for currency
     NumberFormat cf = NumberFormat.getCurrencyInstance();
 
+    //Model instance
+    model.Model model;
+
     /**
-     * Initializes the controller class.
+     * Initializes the controller class
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //Kelby Chen
+        //Populates combo boxes
         getAccountType().getItems().addAll(options);
         model = new model.Model();
     }
 
+    /**
+     * Listeners for combo box and returning to main menu
+     * @param e
+     * @throws IOException
+     */
     @FXML
     private void handleButtonAction(ActionEvent e) throws IOException {
-        //Soren Diehl
-        //Kelby Chen
         Stage stage = (Stage) mainMenu.getScene().getWindow();
         Parent root;
         Scene scene = mainMenu.getScene();
+        
+        //Returns to main menu
         if (e.getSource() == mainMenu) {
             root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
             scene = new Scene(root);
         }
+        
+        //Updates balance respective to combobox selection
         if (e.getSource() == accountType) {
             updateBalance();
         }
@@ -74,20 +82,20 @@ public class BalanceController implements Initializable {
         stage.show();
     }
 
+    /**
+     * Sets balance text box according to accountType
+     */
     public void updateBalance() {
-        //Kelby Chen
-
-        //Updates the balance depending on selection in combo box
         String account = (String) accountType.getValue();
         double bal = model.checkBalance(account);
         balance.setText(cf.format(bal));
     }
 
     /**
-     * @return the accountDD
+     * Returns type of account selected
+     * @return accountType
      */
     public ComboBox getAccountType() {
-        //Soren Diehl
         return accountType;
     }
 }

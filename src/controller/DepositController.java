@@ -21,26 +21,11 @@ import javafx.stage.Stage;
 
 /**
  * FXML Controller class
- *
- * @author Soren Diehl
  * @author Kelby Chen
+ * @author Soren Diehl
  */
-/**
- * Initializes the controller class.
- */
-public class DepositController implements Initializable {
 
-    //Soren Diehl
-    //Kelby Chen
-    ObservableList<String> options
-            = FXCollections.observableArrayList(
-                    "Checking",
-                    "Savings",
-                    "Vacation Club"
-            );
-    @FXML
-    private Label feedback;
-    
+public class DepositController implements Initializable {
     @FXML
     private TextField amount; //user entered withdrawl amount
     @FXML
@@ -54,36 +39,49 @@ public class DepositController implements Initializable {
     @FXML
     private Button cancel; //return to main menu
     @FXML
-    private Button logout; //logout, returns back to login page
-
+    private Label feedback;
+    
+    //List for drop down boxes
+    ObservableList<String> options
+            = FXCollections.observableArrayList(
+                    "Checking",
+                    "Savings",
+                    "Vacation Club"
+            );
     model.Model model;
-
-    /**
-     * @param url
-     * @param rb
-     */
+    
+    //Format for currency
     NumberFormat cf = NumberFormat.getCurrencyInstance();
-
+    
+    /**
+     * Initializes the controller class
+     * @param url
+     * @param rb 
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //Soren Diehl
-        //Kelby Chen
-
         //Populates combo boxes
         getAccountDD().getItems().addAll(options);
         model = new model.Model();
     }
-
+    /**
+     * Listeners for screen items
+     * @param e
+     * @throws IOException 
+     */
     @FXML
     private void handleButtonAction(ActionEvent e) throws IOException {
-        //Soren Diehl
         Stage stage = (Stage) getCancel().getScene().getWindow();
         Parent root;
         Scene scene = getCancel().getScene();
+        
+        //Returns to main menu
         if (e.getSource() == getCancel()) {
             root = FXMLLoader.load(getClass().getResource("/view/MainMenu.fxml"));
             scene = new Scene(root);
         }
+        
+        //Executes deposit
         if (e.getSource() == getExecute()) {
             if(accountDD.getValue() != null){
             if (isNumeric(amount.getText())) {
@@ -100,13 +98,20 @@ public class DepositController implements Initializable {
         }else{feedback.setText("Please choose an account");
                 feedback.setVisible(true);}
         }
+        
+        //Sets account for deposit
         if (e.getSource() == accountDD) {
             selectAccount();
         }
         stage.setScene(scene);
         stage.show();
     }
-
+    
+    /**
+     * Error handling for non numeric entry
+     * @param str
+     * @return 
+     */
     public boolean isNumeric(String str) {
         try {
             double d = Double.parseDouble(str);
@@ -115,9 +120,10 @@ public class DepositController implements Initializable {
         }
         return true;
     }
-
+    /**
+     * Sets balance text box for selected account
+     */
     public void selectAccount() {
-        //Kelby Chen
         String account = (String) accountDD.getValue();
         double bal = model.checkBalance(account);
         balance.setText(cf.format(bal));
@@ -127,7 +133,6 @@ public class DepositController implements Initializable {
      * @return the amount
      */
     public TextField getAmount() {
-        //Soren Diehl
         return amount;
     }
 
@@ -135,7 +140,6 @@ public class DepositController implements Initializable {
      * @return the description
      */
     public TextArea getDesc() {
-        //Soren Diehl
         return desc;
     }
 
@@ -143,7 +147,6 @@ public class DepositController implements Initializable {
      * @return the accountDD
      */
     public ComboBox getAccountDD() {
-        //Soren Diehl
         return accountDD;
     }
 
@@ -151,7 +154,6 @@ public class DepositController implements Initializable {
      * @return the execute
      */
     public Button getExecute() {
-        //Soren Diehl
         return execute;
     }
 
@@ -159,8 +161,6 @@ public class DepositController implements Initializable {
      * @return the cancel
      */
     public Button getCancel() {
-        //Soren Diehl
         return cancel;
     }
-
 }

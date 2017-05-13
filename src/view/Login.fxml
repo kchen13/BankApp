@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="anchorpane" stylesheets="@../css/fxmlview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
-    <!-- Anthony Curran -->
     <children>
         <Label id="bank_name" layoutX="105.0" layoutY="28.0" prefHeight="43.0" prefWidth="391.0" styleClass="mainLabel" text="IST311 Team 1 Bank">
             <font>
